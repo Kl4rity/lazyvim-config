@@ -4,6 +4,7 @@ return {
     ensure_installed = {
       "kotlin-debug-adapter",
       "java-debug-adapter",
+      "dart-debug-adapter",
     },
   },
 }

@@ -11,18 +11,11 @@ return {
           return vim.fn.getcwd()
         end,
       }, -- In your neotest configuration
-
-      ["neotest-gradle"] = {
-        -- This adapter uses Gradle's built-in test reporting
-      },
-
-      ["neotest-dart"] = {
-        -- This adapter uses Gradle's built-in test reporting
-      },
     },
   },
   dependencies = {
     "haydenmeade/neotest-jest",
     "weilbith/neotest-gradle",
+    "sidlatau/neotest-dart",
   },
 }
