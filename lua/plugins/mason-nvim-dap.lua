@@ -3,6 +3,7 @@ return {
   opts = {
     ensure_installed = {
       "kotlin-debug-adapter",
+      "java-debug-adapter",
     },
   },
 }
