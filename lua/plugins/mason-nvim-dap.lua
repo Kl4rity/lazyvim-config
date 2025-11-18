@@ -5,6 +5,7 @@ return {
       "kotlin-debug-adapter",
       "java-debug-adapter",
       "dart-debug-adapter",
+      "js-debug-adapter",
     },
   },
 }
