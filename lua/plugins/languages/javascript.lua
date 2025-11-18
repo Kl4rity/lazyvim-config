@@ -5,9 +5,12 @@ return {
     opts = {
       adapters = {
         ["neotest-jest"] = {
-          jestCommand = "npm test --",
-          jestConfigFile = "jest.config.js",
           env = { CI = true },
+          cwd = function()
+            return vim.fn.getcwd()
+          end,
+        },
+        ["neotest-vitest"] = {
           cwd = function()
             return vim.fn.getcwd()
           end,
@@ -16,6 +19,8 @@ return {
     },
     dependencies = {
       "haydenmeade/neotest-jest",
+      "marilari88/neotest-vitest",
     },
   },
 }
+
