@@ -1,32 +1,26 @@
-return {
-  -- Kotlin debugging configuration
-  {
-    "mfussenegger/nvim-dap",
-    optional = true,
-    dependencies = {
-      "nvim-dap-ui",
+-- Kotlin DAP configuration
+vim.schedule(function()
+  local dap = require("dap")
+
+  -- Kotlin debug adapter configuration
+  dap.adapters.kotlin = {
+    type = "executable",
+    command = "kotlin-debug-adapter",
+  }
+
+  -- Kotlin debug configuration
+  dap.configurations.kotlin = {
+    {
+      type = "kotlin",
+      request = "launch",
+      name = "Launch Kotlin App",
+      mainClass = "MainKt",
+      projectRoot = "${workspaceFolder}",
     },
-    config = function()
-      local dap = require("dap")
+  }
+end)
 
-      -- Kotlin debug adapter configuration
-      dap.adapters.kotlin = {
-        type = "executable",
-        command = "kotlin-debug-adapter",
-      }
-
-      -- Kotlin debug configuration
-      dap.configurations.kotlin = {
-        {
-          type = "kotlin",
-          request = "launch",
-          name = "Launch Kotlin App",
-          mainClass = "MainKt",
-          projectRoot = "${workspaceFolder}",
-        },
-      }
-    end,
-  },
+return {
   -- Kotlin testing configuration
   {
     "nvim-neotest/neotest",

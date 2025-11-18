@@ -15,6 +15,5 @@ return {
   },
   dependencies = {
     "haydenmeade/neotest-jest",
-    "sidlatau/neotest-dart",
   },
 }
