@@ -11,3 +11,10 @@ vim.api.nvim_create_autocmd("FocusLost", {
   pattern = "*",
   command = "silent! wa",
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "http",
+  callback = function()
+    vim.keymap.set("n", "<CR>", ":Http<CR>", { buffer = true, desc = "Run HTTP request" })
+  end,
+})
