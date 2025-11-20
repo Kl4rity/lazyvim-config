@@ -46,9 +46,9 @@ end)
 return {
   -- Kotlin mason packages
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim", -- Correct name. The package moved here.
     opts = {
-      ensure_installed = { "kotlin-lsp" },
+      ensure_installed = { "kotlin_lsp" },
     },
   },
   -- Kotlin testing configuration
