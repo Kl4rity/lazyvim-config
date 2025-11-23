@@ -30,3 +30,9 @@ end, { desc = "Open Test Output" })
 vim.keymap.set("n", "<leader>tO", function()
   require("neotest").output_panel.toggle()
 end, { desc = "Toggle Test Output Panel" })
+
+-- Escape from terminal mode into normal mode
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+
+-- Toggle floating terminal
+
